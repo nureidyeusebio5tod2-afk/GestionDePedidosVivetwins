@@ -269,7 +269,7 @@
             // 
             // FrmLogin
             // 
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1330, 660);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label12);
