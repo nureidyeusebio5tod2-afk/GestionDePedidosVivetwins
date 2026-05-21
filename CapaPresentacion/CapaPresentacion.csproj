@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrearCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearCliente.Designer.cs">
+      <DependentUpon>CrearCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCalendario.cs">
       <SubType>Form</SubType>
     </Compile>
