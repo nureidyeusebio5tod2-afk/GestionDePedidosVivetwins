@@ -85,7 +85,7 @@
             this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(170, 365);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(251, 17);
+            this.label11.Size = new System.Drawing.Size(380, 28);
             this.label11.TabIndex = 1;
             this.label11.Text = "SISTEMA DE PEDIDOS E INSTALACIONES";
             // 
@@ -95,7 +95,7 @@
             this.label6.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(220, 315);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(212, 47);
+            this.label6.Size = new System.Drawing.Size(319, 71);
             this.label6.TabIndex = 0;
             this.label6.Text = "VIVETWINS";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -107,7 +107,7 @@
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label7.Location = new System.Drawing.Point(80, 54);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 21);
+            this.label7.Size = new System.Drawing.Size(97, 32);
             this.label7.TabIndex = 1;
             this.label7.Text = "Usuario";
             // 
@@ -118,7 +118,7 @@
             this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(136)))), ((int)(((byte)(167)))));
             this.linkLabel2.Location = new System.Drawing.Point(137, 269);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(187, 21);
+            this.linkLabel2.Size = new System.Drawing.Size(287, 32);
             this.linkLabel2.TabIndex = 3;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "¿Olvidaste tu contraseña?";
@@ -131,7 +131,7 @@
             this.label10.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.label10.Location = new System.Drawing.Point(209, 114);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(115, 17);
+            this.label10.Size = new System.Drawing.Size(168, 28);
             this.label10.TabIndex = 5;
             this.label10.Text = "Ingrese su usuario";
             // 
@@ -172,7 +172,7 @@
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label12.Location = new System.Drawing.Point(975, 164);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(196, 40);
+            this.label12.Size = new System.Drawing.Size(296, 60);
             this.label12.TabIndex = 9;
             this.label12.Text = "Iniciar sesión";
             // 
@@ -184,7 +184,7 @@
             this.label9.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.label9.Location = new System.Drawing.Point(197, 210);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(136, 17);
+            this.label9.Size = new System.Drawing.Size(199, 28);
             this.label9.TabIndex = 10;
             this.label9.Text = "Ingrese su contraseña";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -196,7 +196,7 @@
             this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label13.Location = new System.Drawing.Point(75, 146);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(92, 21);
+            this.label13.Size = new System.Drawing.Size(138, 32);
             this.label13.TabIndex = 12;
             this.label13.Text = "Contraseña";
             // 
@@ -269,7 +269,7 @@
             // 
             // FrmLogin
             // 
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1330, 660);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label12);
