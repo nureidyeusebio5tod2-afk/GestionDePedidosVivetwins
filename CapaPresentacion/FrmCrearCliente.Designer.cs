@@ -39,6 +39,7 @@
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -159,12 +160,20 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(30, 203);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 9;
+            // 
             // FrmCrearCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(381, 497);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtDireccion);
@@ -192,13 +201,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtTelefono;
+        public System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtDireccion;
+        public System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        public System.Windows.Forms.TextBox txtId;
     }
 }

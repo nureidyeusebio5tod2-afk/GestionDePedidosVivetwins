@@ -89,5 +89,32 @@ namespace CapaDatos
 
             return tabla;
         }
+
+
+        public DataTable BuscarClientes(string campo, string valor)
+        {
+            DataTable tabla = new DataTable();
+
+            using (SqlConnection cn = conexion.AbrirConexion())
+            {
+                SqlCommand cmd =
+                    new SqlCommand("SP_BuscarClientes", cn);
+
+                cmd.CommandType =
+                    CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Campo", campo);
+
+                cmd.Parameters.AddWithValue("@Valor", valor);
+
+                SqlDataAdapter da =
+                    new SqlDataAdapter(cmd);
+
+                da.Fill(tabla);
+            }
+
+            return tabla;
+        }
+
     }
     }

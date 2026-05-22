@@ -26,8 +26,9 @@ namespace CapaPresentacion
 
         }
 
-    
-           
+
+
+
         // =========================================
         // SOLO NUMEROS
         // =========================================
@@ -43,7 +44,7 @@ namespace CapaPresentacion
             }
         }
 
-    
+
 
 
         private void button3_Click(object sender, EventArgs e)
@@ -53,22 +54,24 @@ namespace CapaPresentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-         
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
             try
             {
+                // =====================================
                 // LIMPIAR ESPACIOS
+                // =====================================
+
                 txtNombre.Text = txtNombre.Text.Trim();
-
                 txtTelefono.Text = txtTelefono.Text.Trim();
-
                 txtDireccion.Text = txtDireccion.Text.Trim();
 
                 // =====================================
-                // VALIDAR NOMBRE VACIO
+                // VALIDAR NOMBRE
                 // =====================================
 
                 if (txtNombre.Text == "")
@@ -80,13 +83,10 @@ namespace CapaPresentacion
                         MessageBoxIcon.Warning);
 
                     txtNombre.Focus();
-
                     return;
                 }
 
-                // =====================================
-                // VALIDAR SOLO LETRAS
-                // =====================================
+                // SOLO LETRAS
 
                 if (!Regex.IsMatch(
                     txtNombre.Text,
@@ -99,13 +99,10 @@ namespace CapaPresentacion
                         MessageBoxIcon.Warning);
 
                     txtNombre.Focus();
-
                     return;
                 }
 
-                // =====================================
-                // VALIDAR NOMBRE + 2 APELLIDOS
-                // =====================================
+                // NOMBRE Y APELLIDO
 
                 string[] partesNombre =
                     txtNombre.Text.Split(' ');
@@ -119,7 +116,6 @@ namespace CapaPresentacion
                         MessageBoxIcon.Warning);
 
                     txtNombre.Focus();
-
                     return;
                 }
 
@@ -138,12 +134,11 @@ namespace CapaPresentacion
                         MessageBoxIcon.Warning);
 
                     txtTelefono.Focus();
-
                     return;
                 }
 
                 // =====================================
-                // VALIDAR DIRECCION VACIA
+                // VALIDAR DIRECCION
                 // =====================================
 
                 if (txtDireccion.Text == "")
@@ -155,14 +150,8 @@ namespace CapaPresentacion
                         MessageBoxIcon.Warning);
 
                     txtDireccion.Focus();
-
                     return;
                 }
-
-                // =====================================
-                // VALIDAR DIRECCION REAL
-                // MINIMO 4 PALABRAS
-                // =====================================
 
                 if (txtDireccion.Text.Length < 5)
                 {
@@ -173,7 +162,6 @@ namespace CapaPresentacion
                         MessageBoxIcon.Warning);
 
                     txtDireccion.Focus();
-
                     return;
                 }
 
@@ -184,25 +172,41 @@ namespace CapaPresentacion
                 Cliente cliente = new Cliente();
 
                 cliente.Nombre = txtNombre.Text;
-
                 cliente.Telefono = txtTelefono.Text;
-
                 cliente.Direccion = txtDireccion.Text;
 
-                // =====================================
-                // GUARDAR
-                // =====================================
-
-                negocio.InsertarCliente(cliente);
-
-                MessageBox.Show(
-                    "Cliente guardado correctamente",
-                    "Sistema",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                ClienteBLL negocio = new ClienteBLL();
 
                 // =====================================
-                // ACTUALIZAR GRID
+                // INSERTAR O ACTUALIZAR
+                // =====================================
+
+                if (txtId.Text == "")
+                {
+                    negocio.InsertarCliente(cliente);
+
+                    MessageBox.Show(
+                        "Cliente guardado correctamente",
+                        "Sistema",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
+                else
+                {
+                    cliente.Id_Cliente =
+                        Convert.ToInt32(txtId.Text);
+
+                    negocio.ActualizarCliente(cliente);
+
+                    MessageBox.Show(
+                        "Cliente actualizado correctamente",
+                        "Sistema",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
+
+                // =====================================
+                // ACTUALIZAR DATAGRIDVIEW
                 // =====================================
 
                 FrmCliente frm =
@@ -230,4 +234,5 @@ namespace CapaPresentacion
         }
     }
 }
+    
 

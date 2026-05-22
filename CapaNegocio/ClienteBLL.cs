@@ -41,6 +41,11 @@ namespace CapaNegocio
         {
             datos.EliminarCliente(id);
         }
+
+        public DataTable BuscarClientes(string campo, string valor)
+        {
+            return datos.BuscarClientes(campo, valor);
+        }
     }
 }
     
