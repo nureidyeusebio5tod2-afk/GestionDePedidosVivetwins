@@ -48,8 +48,34 @@ namespace CapaPresentacion
             dataGridView1.Columns["Id_Cliente"].Visible = false;
             dataGridView1.DataSource =
         clienteBLL.MostrarClientes();
+
+            // FUENTE GENERAL
+            dataGridView1.DefaultCellStyle.Font =
+          new Font("Segoe UI", 12, FontStyle.Regular);
+
+            // FUENTE ENCABEZADOS
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font =
+                new Font("Segoe UI", 12, FontStyle.Bold);
+
+            // COLOR ENCABEZADOS
+            dataGridView1.EnableHeadersVisualStyles = false;
+
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor =
+            Color.FromArgb(10, 35, 66);
+
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor =
+                Color.White;
+
+            // COLOR REGISTROS
+            dataGridView1.DefaultCellStyle.ForeColor =
+                Color.Black;
+
+            // OPCIONAL
+            dataGridView1.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
+
+            dataGridView1.RowTemplate.Height = 35;
         }
 
-       
     }
 }
