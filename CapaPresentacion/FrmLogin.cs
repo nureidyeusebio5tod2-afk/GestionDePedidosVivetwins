@@ -38,7 +38,6 @@ namespace CapaPresentacion
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-
         }
 
 
@@ -50,12 +49,7 @@ namespace CapaPresentacion
 
         private void FrmLogin_Load_1(object sender, EventArgs e)
         {
-            txtUsuario.Text = "Ingrese usuario";
-            txtUsuario.ForeColor = Color.Gray;
-
-            txtPassword.Text = "Ingrese contraseña";
-            txtPassword.ForeColor = Color.Gray;
-
+         
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -70,17 +64,12 @@ namespace CapaPresentacion
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            if (txtPassword.Text == "Ingrese contraseña")
-            {
-                txtPassword.Text = "";
-                txtPassword.ForeColor = Color.Black;
-
-                txtPassword.UseSystemPasswordChar = true;
-
+           
         }
-    }
-        
-
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+            
+        }
         private void pictureBox5_Click(object sender, EventArgs e)
         {
 
@@ -88,11 +77,12 @@ namespace CapaPresentacion
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "Ingrese usuario")
-            {
-                txtUsuario.Text = "";
-                txtUsuario.ForeColor = Color.Black;
-            }
+
+        }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -161,6 +151,22 @@ namespace CapaPresentacion
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_Enter(object sender, EventArgs e)
+        {
+            
+
         }
     }
 }
