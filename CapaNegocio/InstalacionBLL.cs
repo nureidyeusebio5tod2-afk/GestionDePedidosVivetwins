@@ -1,31 +1,21 @@
-﻿using CapaDatos;
+﻿using System.Data;
+using CapaDatos;
 using CapaEntidades;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CapaNegocio
 {
     public class InstalacionBLL
     {
-        InstalacionDAL datos = new InstalacionDAL();
+        InstalacionDAL dal = new InstalacionDAL();
+
+        public void GuardarInstalacion(Instalacion instalacion)
+        {
+            dal.InsertarInstalacion(instalacion);
+        }
 
         public DataTable MostrarInstalaciones()
         {
-            return datos.MostrarInstalaciones();
-        }
-
-        public void InsertarInstalacion(Instalacion instalacion)
-        {
-            datos.InsertarInstalacion(instalacion);
-        }
-
-        public void ActualizarInstalacion(Instalacion instalacion)
-        {
-            datos.ActualizarInstalacion(instalacion);
+            return dal.MostrarInstalaciones();
         }
     }
 }
