@@ -76,8 +76,10 @@ namespace CapaPresentacion
                 txtPassword.ForeColor = Color.Black;
 
                 txtPassword.UseSystemPasswordChar = true;
-            }
+
         }
+    }
+        
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
