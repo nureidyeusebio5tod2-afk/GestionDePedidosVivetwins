@@ -46,6 +46,8 @@ namespace CapaNegocio
         {
             return datos.BuscarClientes(campo, valor);
         }
+
+     
     }
 }
     

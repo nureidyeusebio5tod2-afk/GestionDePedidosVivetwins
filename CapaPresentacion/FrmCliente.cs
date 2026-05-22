@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CapaNegocio;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CapaPresentacion
 {
@@ -45,11 +46,7 @@ namespace CapaPresentacion
             EstiloDataGrid();
             AgregarBotones();
 
-            cbFiltro.Items.Add("Nombre");
-            cbFiltro.Items.Add("Telefono");
-            cbFiltro.Items.Add("Direccion");
-
-            cbFiltro.SelectedIndex = 0;
+          
         }
 
 
@@ -232,18 +229,27 @@ private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         private void cbFiltro_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            string campo =
-                cbFiltro.SelectedItem.ToString();
-
-            string valor =
-                txtBuscar.Text;
-
-            dgvClientes.DataSource =
-                clienteBLL.BuscarClientes(campo, valor);
+        
 
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+
+            if (txtBuscar.Text == "")
+            {
+                MostrarClientes();
+            }
+            else
+            {
+                dgvClientes.DataSource =
+                    clienteBLL.BuscarClientes(
+                        "Nombre",
+                        txtBuscar.Text);
+            }
+        }
     }
-    }
+ }
     
         
     
