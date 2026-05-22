@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CapaEntidades;
 using CapaEntidades.CapaEntidades;
 using CapaNegocio;
+using CapaNegocio.CapaNegocio;
 
 namespace CapaPresentacion
 {
@@ -45,9 +46,65 @@ namespace CapaPresentacion
 
         }
 
+        private void CargarClientes()
+        {
+            ClienteBLL negocio = new ClienteBLL();
+
+            cbCliente.DataSource =
+                negocio.MostrarClientes();
+
+            cbCliente.DisplayMember = "Nombre";
+
+            cbCliente.ValueMember = "Id_Cliente";
+
+            cbCliente.SelectedIndex = -1;
+        }
+
         private void FrmPedidos_Load(object sender, EventArgs e)
         {
+            CargarClientes();
+            CargarInstaladores();
+            CargarMaterial();
+            CargarTipoVentana();
 
+        }
+
+        private void CargarMaterial()
+        {
+            cbMaterial.Items.Clear();
+
+            cbMaterial.Items.Add("Aluminio");
+            cbMaterial.Items.Add("PVC");
+            cbMaterial.Items.Add("Madera");
+
+            cbMaterial.SelectedIndex = -1;
+        }
+
+        private void CargarTipoVentana()
+        {
+            cbTipoVentana.Items.Clear();
+
+            cbTipoVentana.Items.Add("Corredera");
+            cbTipoVentana.Items.Add("Fija");
+            cbTipoVentana.Items.Add("Proyectada");
+            cbTipoVentana.Items.Add("Francesa");
+
+            cbTipoVentana.SelectedIndex = -1;
+        }
+
+        private void CargarInstaladores()
+        {
+            InstaladorBLL negocio =
+                new InstaladorBLL();
+
+            cbInstalador.DataSource =
+                negocio.MostrarInstaladores();
+
+            cbInstalador.DisplayMember = "Nombre";
+
+            cbInstalador.ValueMember = "Id_Instalador";
+
+            cbInstalador.SelectedIndex = -1;
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)

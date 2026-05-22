@@ -14,11 +14,11 @@ namespace CapaNegocio
         ClienteDAL datos = new ClienteDAL();
 
         // MOSTRAR
+       
         public DataTable MostrarClientes()
         {
             return datos.MostrarClientes();
         }
-
         // INSERTAR
         public void InsertarCliente(Cliente cliente)
         {

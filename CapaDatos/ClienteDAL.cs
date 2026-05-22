@@ -8,25 +8,7 @@ namespace CapaDatos
     {
         Conexion conexion = new Conexion();
 
-        // MOSTRAR
-        public DataTable MostrarClientes()
-        {
-            DataTable tabla = new DataTable();
-
-            using (SqlConnection cn = conexion.AbrirConexion())
-            {
-                using (SqlCommand cmd = new SqlCommand("SP_MostrarClientes", cn))
-                {
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    SqlDataReader leerFilas = cmd.ExecuteReader();
-
-                    tabla.Load(leerFilas);
-                }
-            }
-
-            return tabla;
-        }
+      
 
         // INSERTAR
         public void InsertarCliente(Cliente cliente)
@@ -82,8 +64,30 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("@Id_Cliente", id);
 
                     cmd.ExecuteNonQuery();
+
                 }
             }
         }
+
+            public DataTable MostrarClientes()
+        {
+            DataTable tabla = new DataTable();
+
+            using (SqlConnection cn = conexion.AbrirConexion())
+            {
+                SqlCommand cmd =
+                    new SqlCommand("SP_MostrarClientes", cn);
+
+                cmd.CommandType =
+                    CommandType.StoredProcedure;
+
+                SqlDataAdapter da =
+                    new SqlDataAdapter(cmd);
+
+                da.Fill(tabla);
+            }
+
+            return tabla;
+        }
     }
-}
+    }

@@ -41,6 +41,7 @@ namespace CapaDatos
             return tabla;
         }
 
+
         // INSERTAR
         public void InsertarInstalador(Instalador instalador)
         {
