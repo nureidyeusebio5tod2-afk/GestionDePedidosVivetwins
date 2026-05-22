@@ -4,27 +4,21 @@ namespace CapaDatos
 {
     public class Conexion
     {
-        private SqlConnection conexion = new SqlConnection(
-            "Server=NUREIDY-TATTA\\MSSQLSERVER02;Database=VivetwinsDB;Integrated Security=true");
 
-        public SqlConnection AbrirConexion()
-        {
-            if (conexion.State == System.Data.ConnectionState.Closed)
+
+            private string cadena =
+                "Server=DESKTOP-MV85JFF;Database=VivetwinsDB;Integrated Security=True";
+
+            public SqlConnection AbrirConexion()
             {
+                SqlConnection conexion =
+                    new SqlConnection(cadena);
+
                 conexion.Open();
+
+                return conexion;
             }
-
-            return conexion;
-        }
-
-        public SqlConnection CerrarConexion()
-        {
-            if (conexion.State == System.Data.ConnectionState.Open)
-            {
-                conexion.Close();
-            }
-
-            return conexion;
-        }
+        
     }
+
 }

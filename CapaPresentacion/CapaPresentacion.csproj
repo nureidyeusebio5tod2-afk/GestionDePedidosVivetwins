@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CrearCliente.cs">
+    <Compile Include="FrmCrearCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CrearCliente.Designer.cs">
-      <DependentUpon>CrearCliente.cs</DependentUpon>
+    <Compile Include="FrmCrearCliente.Designer.cs">
+      <DependentUpon>FrmCrearCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCalendario.cs">
       <SubType>Form</SubType>
@@ -96,6 +96,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmCrearCliente.resx">
+      <DependentUpon>FrmCrearCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCalendario.resx">
       <DependentUpon>FrmCalendario.cs</DependentUpon>
     </EmbeddedResource>
