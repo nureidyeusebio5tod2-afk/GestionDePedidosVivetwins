@@ -333,7 +333,9 @@
             // PanelTop
             // 
             this.PanelTop.BackColor = System.Drawing.Color.White;
+            this.PanelTop.Controls.Add(this.label12);
             this.PanelTop.Controls.Add(this.lblRol);
+            this.PanelTop.Controls.Add(this.lblBienvenida);
             this.PanelTop.Controls.Add(this.lblFecha);
             this.PanelTop.Controls.Add(this.pictureBox12);
             this.PanelTop.Controls.Add(this.pictureBox10);
@@ -400,7 +402,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label12.Location = new System.Drawing.Point(280, 127);
+            this.label12.Location = new System.Drawing.Point(103, 52);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(181, 13);
             this.label12.TabIndex = 5;
@@ -410,7 +412,7 @@
             // 
             this.lblBienvenida.AutoSize = true;
             this.lblBienvenida.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenida.Location = new System.Drawing.Point(291, 88);
+            this.lblBienvenida.Location = new System.Drawing.Point(87, 15);
             this.lblBienvenida.Name = "lblBienvenida";
             this.lblBienvenida.Size = new System.Drawing.Size(242, 30);
             this.lblBienvenida.TabIndex = 4;
@@ -431,8 +433,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1386, 767);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.lblBienvenida);
             this.Controls.Add(this.PanelTop);
             this.Controls.Add(this.PanelMenu);
             this.Controls.Add(this.PanelContenedor);
@@ -456,7 +456,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

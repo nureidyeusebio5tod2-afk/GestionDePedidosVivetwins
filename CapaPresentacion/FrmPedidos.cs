@@ -129,7 +129,9 @@ namespace CapaPresentacion
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            FrmCrearCliente frm = new FrmCrearCliente();
+            frm.Owner = this;
+            frm.ShowDialog();
         }
 
         private void btnGuardarPedido_Click(object sender, EventArgs e)
