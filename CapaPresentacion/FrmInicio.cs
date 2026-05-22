@@ -16,6 +16,7 @@ namespace CapaPresentacion
     {
         private Form formularioActivo = null;
 
+
         public FrmInicio()
         {
 
@@ -67,11 +68,8 @@ namespace CapaPresentacion
             lblBienvenida.Text = "Bienvenido " + Sesion.Usuario;
             lblRol.Text = Sesion.Rol;
             lblFecha.Text = DateTime.Now.ToLongDateString();
-            CargarDashboard();
-            CargarInstalacionesProximas();
+            
         }
-
-        // ================= ABRIR FORMULARIOS =================
         private void AbrirFormulario(Form nuevoForm)
         {
             try
@@ -102,77 +100,27 @@ namespace CapaPresentacion
             }
         }
 
-        private void CargarDashboard()
-        {
-            try
-            {
-                DashboardBLL negocio = new DashboardBLL();
-                DataTable tabla = negocio.DashboardResumen();
+        // ================= BOTONES ================= 
 
-                if (tabla.Rows.Count > 0)
-                {
-                    lblP.Text = tabla.Rows[0]["Pendientes"].ToString();
-                    lblEnProceso.Text = tabla.Rows[0]["EnProceso"].ToString();
-                    lblFinalizados.Text = tabla.Rows[0]["Finalizados"].ToString();
-                    lblInstalacionesHoy.Text = tabla.Rows[0]["InstalacionesHoy"].ToString();
-                }
-            }
-            catch (Exception ex)
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            btnInicio.BackColor = Color.FromArgb(17, 136, 167);
+
+            if (formularioActivo != null)
             {
-                MessageBox.Show(ex.Message);
+                formularioActivo.Close();
+                formularioActivo.Dispose();
+                formularioActivo = null;
             }
+
+            PanelContenedor.Controls.Clear();
+
+            AbrirFormulario(new FrmDashboard());
+
         }
 
 
 
-        private void CargarInstalacionesProximas()
-        {
-            try
-            {
-                flowInstalaciones.Controls.Clear();
-
-                DashboardBLL negocio = new DashboardBLL();
-                DataTable tabla = negocio.InstalacionesProximas();
-
-                foreach (DataRow fila in tabla.Rows)
-                {
-                    Panel panel = new Panel
-                    {
-                        Width = 250,
-                        Height = 70,
-                        BackColor = Color.White,
-                        Margin = new Padding(5)
-                    };
-
-                    Label lblCliente = new Label
-                    {
-                        Text = fila["Cliente"].ToString(),
-                        Font = new Font("Segoe UI", 10, FontStyle.Bold),
-                        Location = new Point(10, 10),
-                        AutoSize = true
-                    };
-
-                    Label lblFecha = new Label
-                    {
-                        Text = Convert.ToDateTime(fila["Fecha_Instalacion"])
-                               .ToString("dd/MM/yyyy - hh:mm tt"),
-                        Font = new Font("Segoe UI", 9),
-                        ForeColor = Color.Gray,
-                        Location = new Point(10, 35),
-                        AutoSize = true
-                    };
-
-                    panel.Controls.Add(lblCliente);
-                    panel.Controls.Add(lblFecha);
-
-                    flowInstalaciones.Controls.Add(panel);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
 
         private void label11_Click(object sender, EventArgs e)
         {
@@ -199,29 +147,17 @@ namespace CapaPresentacion
 
         }
 
-        private void btnInicio_Click(object sender, EventArgs e)
-        {
-            FrmInicio Inicio = new FrmInicio();
-            Inicio.Show();
 
-            AbrirFormulario(new FrmInicio());
-        }
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            FrmCliente clientes = new FrmCliente();
-            clientes.Show();
-
+            
             AbrirFormulario(new FrmCliente());
 
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-
-            FrmPedidos pedidos = new FrmPedidos();
-            pedidos.Show();
-
             AbrirFormulario(new FrmPedidos());
 
         }
@@ -242,7 +178,36 @@ namespace CapaPresentacion
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-           
+            AbrirFormulario(new FrmReportes());
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmUsuario());
+
+        }
+
+        private void btnConfiguracion_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmConfiguracion());
+
+        }
+
+        private void btnCerrarSeccion_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new FrmLogin());
+
+        }
+
+        private void PanelContenedor_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
