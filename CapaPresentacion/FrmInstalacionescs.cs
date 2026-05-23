@@ -1,5 +1,4 @@
-﻿using CapaEntidades;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaEntidades;
+using CapaNegocio;
 
 namespace CapaPresentacion
 {
@@ -17,7 +18,7 @@ namespace CapaPresentacion
     {
         List<Instalacion> listaInstalaciones = new List<Instalacion>();
         DataTable dtInstalaciones = new DataTable();
-
+        InstalacionBLL instalacionBLL = new InstalacionBLL();
 
         public FrmInstalacionescs()
         {
@@ -25,12 +26,57 @@ namespace CapaPresentacion
         }
         private void CargarInstalaciones()
         {
-      
+            dataGridView1.DataSource =
+               instalacionBLL.MostrarInstalaciones();
         }
         private void FrmInstalacionescs_Load(object sender, EventArgs e)
-        { 
+        {
+            CargarInstalaciones();
+            EstiloDataGrid();
         }
-        
+
+        // =====================================
+        // ESTILO DEL DATAGRIDVIEW
+        // =====================================
+
+        private void EstiloDataGrid()
+        {
+            dataGridView1.BorderStyle = BorderStyle.None;
+
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.FromArgb(245, 245, 245);
+
+            dataGridView1.DefaultCellStyle.SelectionBackColor =
+                Color.FromArgb(17, 136, 167);
+
+            dataGridView1.DefaultCellStyle.SelectionForeColor =
+                Color.White;
+
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor =
+                Color.FromArgb(10, 25, 47);
+
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor =
+                Color.White;
+
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font =
+                new Font("Segoe UI", 10, FontStyle.Bold);
+
+            dataGridView1.DefaultCellStyle.Font =
+                new Font("Segoe UI", 10);
+
+            dataGridView1.RowTemplate.Height = 35;
+
+            dataGridView1.EnableHeadersVisualStyles = false;
+
+            dataGridView1.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
+
+            dataGridView1.AllowUserToAddRows = false;
+
+            dataGridView1.ReadOnly = true;
+        }
+
+
         private void Filtrar()
         {
            
@@ -92,6 +138,17 @@ namespace CapaPresentacion
         {
 
             Filtrar();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmCalendario frm = new FrmCalendario();
+            frm.Show();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

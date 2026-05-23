@@ -201,7 +201,10 @@ namespace CapaPresentacion
 
         private void btnCerrarSeccion_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new FrmLogin());
+            FrmLogin login = new FrmLogin();
+            login.Show();
+
+            this.Close();
 
         }
 
