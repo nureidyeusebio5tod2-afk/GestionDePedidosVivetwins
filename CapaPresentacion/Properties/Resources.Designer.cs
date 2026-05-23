@@ -63,6 +63,16 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _95c50878_4e2c_4b4f_808a_aee22db1e615 {
+            get {
+                object obj = ResourceManager.GetObject("95c50878-4e2c-4b4f-808a-aee22db1e615", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Captura_de_pantalla_2026_05_20_150230 {
             get {
                 object obj = ResourceManager.GetObject("Captura de pantalla 2026-05-20 150230", resourceCulture);
@@ -86,6 +96,16 @@ namespace CapaPresentacion.Properties {
         internal static System.Drawing.Bitmap Captura_de_pantalla_2026_05_20_154430 {
             get {
                 object obj = ResourceManager.GetObject("Captura de pantalla 2026-05-20 154430", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cerrar {
+            get {
+                object obj = ResourceManager.GetObject("cerrar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -337,6 +357,16 @@ namespace CapaPresentacion.Properties {
         internal static System.Drawing.Bitmap profile_icon_illustration_for_uiux_web_app_infographic_etc_vector {
             get {
                 object obj = ResourceManager.GetObject("profile-icon-illustration-for-uiux-web-app-infographic-etc-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap usuario {
+            get {
+                object obj = ResourceManager.GetObject("usuario", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
