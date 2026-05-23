@@ -59,7 +59,11 @@ namespace CapaPresentacion
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+
+            string conexion = "Server=NUREIDY-TATTA\\MSSQLSERVER02;Database=VivetwinsDB;Integrated Security=true";
+
         }
+
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
