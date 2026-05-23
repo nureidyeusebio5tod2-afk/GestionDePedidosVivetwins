@@ -121,11 +121,14 @@
   <data name="profile-icon-illustration-for-uiux-web-app-infographic-etc-vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\profile-icon-illustration-for-uiux-web-app-infographic-etc-vector.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="descarga (4)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\descarga (4)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="95c50878-4e2c-4b4f-808a-aee22db1e615" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\95c50878-4e2c-4b4f-808a-aee22db1e615.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="descarga (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\descarga (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon-7797704_1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-7797704_1280.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="descarga (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\descarga (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,8 +142,14 @@
   <data name="descarga (8)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\descarga (8)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="descarga (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\descarga (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="descarga (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\descarga (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="descarga (8)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\descarga (8)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="descarga (11)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\descarga (11).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,9 +163,6 @@
   <data name="descarga (7)2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\descarga (7)2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="descarga (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\descarga (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="descarga" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\descarga.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -169,8 +175,8 @@
   <data name="png-transparent-user-black-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\png-transparent-user-black-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="descarga (8)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\descarga (8)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="descarga (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\descarga (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WhatsApp Image 2026-05-20 at 5.46.09 PM" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WhatsApp Image 2026-05-20 at 5.46.09 PM.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,13 +214,16 @@
   <data name="USUARIO ICONO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\USUARIO ICONO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="descarga (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\descarga (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="descarga (7)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\descarga (7)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="descarga (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\descarga (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="descarga (4)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\descarga (4)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon-7797704_1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-7797704_1280.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

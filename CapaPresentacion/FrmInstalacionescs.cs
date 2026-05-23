@@ -52,8 +52,8 @@ namespace CapaPresentacion
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+
            
-            dataGridView1.DataSource = listaInstalaciones;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -68,19 +68,26 @@ namespace CapaPresentacion
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-      
-          
+            Filtrar();
+
+
         }
 
         private void FiltrarPorEstado()
         {
+            
         }
 
-
+       
+    
+        private void CargarCombos()
+        {
+            
+        }
         private void cmbEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
-        
 
+            Filtrar();
 
         }
     }
