@@ -8,6 +8,7 @@ namespace CapaEntidades
 { 
         public class Instalacion
         {
+            public int Id_Instalacion { get; set; }
             public int Id_Pedido { get; set; }
 
             public int Id_Instalador { get; set; }

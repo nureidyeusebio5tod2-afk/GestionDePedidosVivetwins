@@ -38,6 +38,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.chkMostrar = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,7 +125,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(35)))), ((int)(((byte)(66)))));
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(34, 380);
+            this.button1.Location = new System.Drawing.Point(34, 452);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 36);
             this.button1.TabIndex = 7;
@@ -133,7 +137,7 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(35)))), ((int)(((byte)(66)))));
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(191, 380);
+            this.button2.Location = new System.Drawing.Point(191, 452);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(144, 34);
             this.button2.TabIndex = 8;
@@ -141,11 +145,51 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(16, 174);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(59, 20);
+            this.txtId.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(16, 358);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(97, 21);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Contaseña*";
+            // 
+            // txtContraseña
+            // 
+            this.txtContraseña.Location = new System.Drawing.Point(20, 397);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(187, 20);
+            this.txtContraseña.TabIndex = 11;
+            this.txtContraseña.UseSystemPasswordChar = true;
+            // 
+            // chkMostrar
+            // 
+            this.chkMostrar.AutoSize = true;
+            this.chkMostrar.Location = new System.Drawing.Point(217, 397);
+            this.chkMostrar.Name = "chkMostrar";
+            this.chkMostrar.Size = new System.Drawing.Size(118, 17);
+            this.chkMostrar.TabIndex = 12;
+            this.chkMostrar.Text = "Mostrar Contraseña";
+            this.chkMostrar.UseVisualStyleBackColor = true;
+            this.chkMostrar.CheckedChanged += new System.EventHandler(this.chkMostrar_CheckedChanged);
+            // 
             // FrmCrearUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 437);
+            this.ClientSize = new System.Drawing.Size(372, 515);
+            this.Controls.Add(this.chkMostrar);
+            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
@@ -170,12 +214,16 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtUsuario;
+        public System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cboRol;
-        private System.Windows.Forms.ComboBox cboEstado;
+        public System.Windows.Forms.ComboBox cboRol;
+        public System.Windows.Forms.ComboBox cboEstado;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.CheckBox chkMostrar;
     }
 }

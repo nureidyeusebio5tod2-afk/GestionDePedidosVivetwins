@@ -132,5 +132,62 @@ namespace CapaDatos
                 throw new Exception("Error general en el login: " + ex.Message);
             }
         }
+
+        public void EliminarUsuario(int id)
+        {
+            using (SqlConnection cn =
+                conexion.AbrirConexion())
+            {
+                using (SqlCommand cmd =
+                    new SqlCommand(
+                        "SP_EliminarUsuario", cn))
+                {
+                    cmd.CommandType =
+                        CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue(
+                        "@Id_Usuario", id);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void ActualizarUsuario(Usuario usuario)
+        {
+            using (SqlConnection cn =
+                    conexion.AbrirConexion())
+            {
+                using (SqlCommand cmd =
+                    new SqlCommand(
+                        "SP_ActualizarUsuario", cn))
+                {
+                    cmd.CommandType =
+                        CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue(
+                        "@Id_Usuario",
+                        usuario.Id_Usuario);
+
+                    cmd.Parameters.AddWithValue(
+                        "@Nombre_Usuario",
+                        usuario.Nombre_Usuario);
+
+                    cmd.Parameters.AddWithValue(
+                        "@Contraseña",
+                        usuario.Clave);
+
+                    cmd.Parameters.AddWithValue(
+                        "@NombreRol",
+                        usuario.NombreRol);
+
+                    cmd.Parameters.AddWithValue(
+                        "@Estado",
+                        usuario.Estado);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }

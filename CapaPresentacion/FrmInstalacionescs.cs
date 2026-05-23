@@ -81,7 +81,7 @@ namespace CapaPresentacion
         {
             DataTable dt = new DataTable();
 
-            string conexion = "Server=.;Database=GestionDePedidosVivetwins;Integrated Security=true";
+            string conexion = "Server=NUREIDY-TATTA\\MSSQLSERVER02;Database=VivetwinsDB;Integrated Security=true";
 
             using (SqlConnection con = new SqlConnection(conexion))
             {

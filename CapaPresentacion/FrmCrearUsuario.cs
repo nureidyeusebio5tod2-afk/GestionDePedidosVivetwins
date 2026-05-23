@@ -97,6 +97,40 @@ namespace CapaPresentacion
                     cboEstado.Focus();
 
                     return;
+
+                    // =====================================
+                    // VALIDAR CONTRASEÑA
+                    // =====================================
+
+                    if (txtContraseña.Text == "")
+                    {
+                        MessageBox.Show(
+                            "Ingrese la contraseña",
+                            "Validación",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+
+                        txtContraseña.Focus();
+
+                        return;
+                    }
+                }
+
+                // =====================================
+                // VALIDAR CONTRASEÑA
+                // =====================================
+
+                if (txtContraseña.Text == "")
+                {
+                    MessageBox.Show(
+                        "Ingrese la contraseña",
+                        "Validación",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+
+                    txtContraseña.Focus();
+
+                    return;
                 }
 
                 // =====================================
@@ -105,23 +139,50 @@ namespace CapaPresentacion
 
                 Usuario usuario = new Usuario();
 
+                usuario.Clave = txtContraseña.Text;
+
                 usuario.Nombre_Usuario = txtUsuario.Text;
 
                 usuario.NombreRol = cboRol.Text;
 
                 usuario.Estado = cboEstado.Text;
 
+                if (cboRol.Text == "Administrador")
+                {
+                    usuario.Id_Rol = 1;
+                }
+                else if (cboRol.Text == "Empleado")
+                {
+                    usuario.Id_Rol = 2;
+                }
+
                 // =====================================
-                // GUARDAR
+                // INSERTAR O ACTUALIZAR
                 // =====================================
 
-                negocio.InsertarUsuario(usuario);
+                if (txtId.Text == "")
+                {
+                    negocio.InsertarUsuario(usuario);
 
-                MessageBox.Show(
-                    "Usuario guardado correctamente",
-                    "Sistema",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                    MessageBox.Show(
+                        "Usuario guardado correctamente",
+                        "Sistema",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
+                else
+                {
+                    usuario.Id_Usuario =
+                        Convert.ToInt32(txtId.Text);
+
+                    negocio.ActualizarUsuario(usuario);
+
+                    MessageBox.Show(
+                        "Usuario actualizado correctamente",
+                        "Sistema",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
 
                 // =====================================
                 // ACTUALIZAR GRID
@@ -149,6 +210,8 @@ namespace CapaPresentacion
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
+
+
         }
         
 
@@ -161,8 +224,19 @@ namespace CapaPresentacion
             cboEstado.Items.Add("Inactivo");
         }
 
-     
-          
+
+
+        private void chkMostrar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkMostrar.Checked)
+            {
+                txtContraseña.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtContraseña.UseSystemPasswordChar = true;
+            }
+        }
     }
 }
 

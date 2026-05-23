@@ -35,5 +35,19 @@ namespace CapaNegocio
 
             return dal.LoginUsuario(usuario);
         }
+
+        public void EliminarUsuario(int id)
+        {
+            UsuarioDAL datos = new UsuarioDAL();
+
+            datos.EliminarUsuario(id);
+        }
+
+        public void ActualizarUsuario(Usuario usuario)
+        {
+            UsuarioDAL datos = new UsuarioDAL();
+
+            datos.ActualizarUsuario(usuario);
+        }
     }
 }
