@@ -13,6 +13,7 @@ namespace CapaPresentacion
 {
     public partial class FrmDashboard : Form
     {
+        DashboardBLL DashboardBLL = new DashboardBLL();
         public FrmDashboard()
         {
             InitializeComponent();
@@ -20,10 +21,57 @@ namespace CapaPresentacion
 
         private void FrmDashboard_Load(object sender, EventArgs e)
         {
+            EstiloDataGrid();
             CargarDashboard();
+            CargarPedidosRecientes();
             CargarInstalacionesProximas();
         }
 
+        private void CargarPedidosRecientes()
+        {
+            dataGridView1.DataSource = DashboardBLL.PedidosRecientes();
+        }
+
+        // =====================================
+        // ESTILO DEL DATAGRIDVIEW
+        // =====================================
+
+        private void EstiloDataGrid()
+        {
+            dataGridView1.BorderStyle = BorderStyle.None;
+
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor =
+                Color.FromArgb(245, 245, 245);
+
+            dataGridView1.DefaultCellStyle.SelectionBackColor =
+                Color.FromArgb(17, 136, 167);
+
+            dataGridView1.DefaultCellStyle.SelectionForeColor =
+                Color.White;
+
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor =
+                Color.FromArgb(10, 25, 47);
+
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor =
+                Color.White;
+
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font =
+                new Font("Segoe UI", 10, FontStyle.Bold);
+
+            dataGridView1.DefaultCellStyle.Font =
+                new Font("Segoe UI", 10);
+
+            dataGridView1.RowTemplate.Height = 35;
+
+            dataGridView1.EnableHeadersVisualStyles = false;
+
+            dataGridView1.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
+
+            dataGridView1.AllowUserToAddRows = false;
+
+            dataGridView1.ReadOnly = true;
+        }
         private void CargarDashboard()
         {
             try
@@ -96,5 +144,9 @@ namespace CapaPresentacion
             }
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
