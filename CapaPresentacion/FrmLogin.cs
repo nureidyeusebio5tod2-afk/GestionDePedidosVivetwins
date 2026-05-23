@@ -49,7 +49,7 @@ namespace CapaPresentacion
 
         private void FrmLogin_Load_1(object sender, EventArgs e)
         {
-         
+            
         }
 
         private void label6_Click(object sender, EventArgs e)
