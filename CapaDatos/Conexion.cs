@@ -8,7 +8,7 @@ namespace CapaDatos
 
 
             private string cadena =
-                "Server=DESKTOP-PID3H25;Database=VivetwinsDB;Integrated Security=True";
+                "Server=NUREIDY-TATTA\\MSSQLSERVER02;Database=VivetwinsDB;Integrated Security=True";
 
             public SqlConnection AbrirConexion()
             {

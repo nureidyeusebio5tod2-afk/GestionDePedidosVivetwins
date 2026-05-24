@@ -34,32 +34,36 @@
             this.flowInstalaciones = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelProceso = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.lblEnProceso = new System.Windows.Forms.Label();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.panelHoy = new System.Windows.Forms.Panel();
             this.lblInstalacionesHoy = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelPendientes = new System.Windows.Forms.Panel();
             this.lblPendientes = new System.Windows.Forms.Label();
             this.lblP = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.panelFinalizado = new System.Windows.Forms.Panel();
             this.lblFinalizados = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.panelLineaPendiente = new System.Windows.Forms.Panel();
+            this.panelLineaProceso = new System.Windows.Forms.Panel();
+            this.panelLineaFinalizado = new System.Windows.Forms.Panel();
+            this.panelLineaHoy = new System.Windows.Forms.Panel();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.flowInstalaciones.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.panelProceso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            this.panel6.SuspendLayout();
+            this.panelHoy.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            this.panel3.SuspendLayout();
+            this.panelPendientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            this.panel5.SuspendLayout();
+            this.panelFinalizado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,16 +128,17 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Instalaciones proximas";
             // 
-            // panel4
+            // panelProceso
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.lblEnProceso);
-            this.panel4.Controls.Add(this.pictureBox13);
-            this.panel4.Location = new System.Drawing.Point(557, 164);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(235, 70);
-            this.panel4.TabIndex = 14;
+            this.panelProceso.BackColor = System.Drawing.Color.White;
+            this.panelProceso.Controls.Add(this.panelLineaProceso);
+            this.panelProceso.Controls.Add(this.label3);
+            this.panelProceso.Controls.Add(this.lblEnProceso);
+            this.panelProceso.Controls.Add(this.pictureBox13);
+            this.panelProceso.Location = new System.Drawing.Point(557, 164);
+            this.panelProceso.Name = "panelProceso";
+            this.panelProceso.Size = new System.Drawing.Size(235, 70);
+            this.panelProceso.TabIndex = 14;
             // 
             // label3
             // 
@@ -157,23 +162,24 @@
             // pictureBox13
             // 
             this.pictureBox13.Image = global::CapaPresentacion.Properties.Resources.descarga__9_;
-            this.pictureBox13.Location = new System.Drawing.Point(15, 23);
+            this.pictureBox13.Location = new System.Drawing.Point(3, 16);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(50, 38);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox13.TabIndex = 0;
             this.pictureBox13.TabStop = false;
             // 
-            // panel6
+            // panelHoy
             // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Controls.Add(this.lblInstalacionesHoy);
-            this.panel6.Controls.Add(this.label2);
-            this.panel6.Controls.Add(this.pictureBox16);
-            this.panel6.Location = new System.Drawing.Point(1104, 164);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(235, 70);
-            this.panel6.TabIndex = 16;
+            this.panelHoy.BackColor = System.Drawing.Color.White;
+            this.panelHoy.Controls.Add(this.panelLineaHoy);
+            this.panelHoy.Controls.Add(this.lblInstalacionesHoy);
+            this.panelHoy.Controls.Add(this.label2);
+            this.panelHoy.Controls.Add(this.pictureBox16);
+            this.panelHoy.Location = new System.Drawing.Point(1104, 164);
+            this.panelHoy.Name = "panelHoy";
+            this.panelHoy.Size = new System.Drawing.Size(235, 70);
+            this.panelHoy.TabIndex = 16;
             // 
             // lblInstalacionesHoy
             // 
@@ -197,23 +203,24 @@
             // pictureBox16
             // 
             this.pictureBox16.Image = global::CapaPresentacion.Properties.Resources.WhatsApp_Image_2026_05_20_at_5_46_09_PM;
-            this.pictureBox16.Location = new System.Drawing.Point(14, 27);
+            this.pictureBox16.Location = new System.Drawing.Point(3, 14);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(52, 40);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox16.TabIndex = 0;
             this.pictureBox16.TabStop = false;
             // 
-            // panel3
+            // panelPendientes
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.lblPendientes);
-            this.panel3.Controls.Add(this.lblP);
-            this.panel3.Controls.Add(this.pictureBox15);
-            this.panel3.Location = new System.Drawing.Point(286, 164);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(235, 70);
-            this.panel3.TabIndex = 13;
+            this.panelPendientes.BackColor = System.Drawing.Color.White;
+            this.panelPendientes.Controls.Add(this.panelLineaPendiente);
+            this.panelPendientes.Controls.Add(this.lblPendientes);
+            this.panelPendientes.Controls.Add(this.lblP);
+            this.panelPendientes.Controls.Add(this.pictureBox15);
+            this.panelPendientes.Location = new System.Drawing.Point(286, 164);
+            this.panelPendientes.Name = "panelPendientes";
+            this.panelPendientes.Size = new System.Drawing.Size(235, 70);
+            this.panelPendientes.TabIndex = 13;
             // 
             // lblPendientes
             // 
@@ -237,23 +244,24 @@
             // pictureBox15
             // 
             this.pictureBox15.Image = global::CapaPresentacion.Properties.Resources.descarga__11_;
-            this.pictureBox15.Location = new System.Drawing.Point(3, 23);
+            this.pictureBox15.Location = new System.Drawing.Point(3, 14);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(38, 38);
+            this.pictureBox15.Size = new System.Drawing.Size(47, 38);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 0;
             this.pictureBox15.TabStop = false;
             // 
-            // panel5
+            // panelFinalizado
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Controls.Add(this.lblFinalizados);
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Controls.Add(this.pictureBox14);
-            this.panel5.Location = new System.Drawing.Point(831, 164);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(235, 70);
-            this.panel5.TabIndex = 15;
+            this.panelFinalizado.BackColor = System.Drawing.Color.White;
+            this.panelFinalizado.Controls.Add(this.panelLineaFinalizado);
+            this.panelFinalizado.Controls.Add(this.lblFinalizados);
+            this.panelFinalizado.Controls.Add(this.label5);
+            this.panelFinalizado.Controls.Add(this.pictureBox14);
+            this.panelFinalizado.Location = new System.Drawing.Point(831, 164);
+            this.panelFinalizado.Name = "panelFinalizado";
+            this.panelFinalizado.Size = new System.Drawing.Size(235, 70);
+            this.panelFinalizado.TabIndex = 15;
             // 
             // lblFinalizados
             // 
@@ -277,12 +285,41 @@
             // pictureBox14
             // 
             this.pictureBox14.Image = global::CapaPresentacion.Properties.Resources.descarga__10_;
-            this.pictureBox14.Location = new System.Drawing.Point(3, 23);
+            this.pictureBox14.Location = new System.Drawing.Point(0, 16);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(58, 38);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 0;
             this.pictureBox14.TabStop = false;
+            // 
+            // panelLineaPendiente
+            // 
+            this.panelLineaPendiente.Location = new System.Drawing.Point(0, 60);
+            this.panelLineaPendiente.Name = "panelLineaPendiente";
+            this.panelLineaPendiente.Size = new System.Drawing.Size(235, 10);
+            this.panelLineaPendiente.TabIndex = 19;
+            this.panelLineaPendiente.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLineaPendiente_Paint);
+            // 
+            // panelLineaProceso
+            // 
+            this.panelLineaProceso.Location = new System.Drawing.Point(0, 58);
+            this.panelLineaProceso.Name = "panelLineaProceso";
+            this.panelLineaProceso.Size = new System.Drawing.Size(235, 12);
+            this.panelLineaProceso.TabIndex = 0;
+            // 
+            // panelLineaFinalizado
+            // 
+            this.panelLineaFinalizado.Location = new System.Drawing.Point(0, 57);
+            this.panelLineaFinalizado.Name = "panelLineaFinalizado";
+            this.panelLineaFinalizado.Size = new System.Drawing.Size(235, 13);
+            this.panelLineaFinalizado.TabIndex = 0;
+            // 
+            // panelLineaHoy
+            // 
+            this.panelLineaHoy.Location = new System.Drawing.Point(0, 57);
+            this.panelLineaHoy.Name = "panelLineaHoy";
+            this.panelLineaHoy.Size = new System.Drawing.Size(235, 13);
+            this.panelLineaHoy.TabIndex = 9;
             // 
             // FrmDashboard
             // 
@@ -291,10 +328,10 @@
             this.ClientSize = new System.Drawing.Size(1347, 645);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.flowInstalaciones);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panelProceso);
+            this.Controls.Add(this.panelHoy);
+            this.Controls.Add(this.panelPendientes);
+            this.Controls.Add(this.panelFinalizado);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmDashboard";
             this.Text = "FrmDashboard";
@@ -304,17 +341,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.flowInstalaciones.ResumeLayout(false);
             this.flowInstalaciones.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panelProceso.ResumeLayout(false);
+            this.panelProceso.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.panelHoy.ResumeLayout(false);
+            this.panelHoy.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panelPendientes.ResumeLayout(false);
+            this.panelPendientes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.panelFinalizado.ResumeLayout(false);
+            this.panelFinalizado.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.ResumeLayout(false);
 
@@ -328,21 +365,25 @@
         private System.Windows.Forms.Panel flowInstalaciones;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panelProceso;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblEnProceso;
         private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panelHoy;
         private System.Windows.Forms.Label lblInstalacionesHoy;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox16;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelPendientes;
         private System.Windows.Forms.Label lblPendientes;
         private System.Windows.Forms.Label lblP;
         private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panelFinalizado;
         private System.Windows.Forms.Label lblFinalizados;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.Panel panelLineaPendiente;
+        private System.Windows.Forms.Panel panelLineaProceso;
+        private System.Windows.Forms.Panel panelLineaHoy;
+        private System.Windows.Forms.Panel panelLineaFinalizado;
     }
 }
