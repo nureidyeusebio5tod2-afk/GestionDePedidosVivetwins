@@ -144,13 +144,16 @@ namespace CapaPresentacion
 
                 frm.cboRol.Text =
                     dataGridView1.Rows[e.RowIndex]
-                    .Cells["NombreRol"]
+                    .Cells["Nombre_Rol"]
                     .Value.ToString();
+
 
                 frm.cboEstado.Text =
                     dataGridView1.Rows[e.RowIndex]
                     .Cells["Estado"]
                     .Value.ToString();
+
+         
 
                 frm.Owner = this;
 
@@ -218,10 +221,11 @@ namespace CapaPresentacion
                     dataGridView1.Rows[e.RowIndex]
                     .Cells["Nombre_Usuario"]
                     .Value.ToString();
+            
 
                 frm.cboRol.Text =
                     dataGridView1.Rows[e.RowIndex]
-                    .Cells["NombreRol"]
+                    .Cells["Nombre_Rol"]
                     .Value.ToString();
 
                 frm.cboEstado.Text =

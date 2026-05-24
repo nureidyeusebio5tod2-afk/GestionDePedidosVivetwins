@@ -35,7 +35,7 @@ namespace CapaPresentacion
 
             SqlConnection cn =
             new SqlConnection(
-            "Data Source=NUREIDY-TATTA\\MSSQLSERVER02;Initial Catalog=VivetwinsDB;Integrated Security=True");
+            "Data Source=DESKTOP-PID3H25;Initial Catalog=VivetwinsDB;Integrated Security=True");
 
             SqlCommand cmd =
             new SqlCommand("SP_ExisteUsuario", cn);

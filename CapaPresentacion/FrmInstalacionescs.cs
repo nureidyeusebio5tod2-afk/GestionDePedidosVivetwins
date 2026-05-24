@@ -79,8 +79,9 @@ namespace CapaPresentacion
 
         private void Filtrar()
         {
-           
+        
         }
+        
         private void CargarComboEstado()
         {
           
@@ -106,7 +107,7 @@ namespace CapaPresentacion
         {
 
 
-            string conexion = "Server=NUREIDY-TATTA\\MSSQLSERVER02;Database=VivetwinsDB;Integrated Security=true";
+            string conexion = "Server=DESKTOP-PID3H25;Database=VivetwinsDB;Integrated Security=true";
 
         }
 

@@ -155,15 +155,12 @@ namespace CapaDatos
 
         public void ActualizarUsuario(Usuario usuario)
         {
-            using (SqlConnection cn =
-                    conexion.AbrirConexion())
+            using (SqlConnection cn = conexion.AbrirConexion())
             {
                 using (SqlCommand cmd =
-                    new SqlCommand(
-                        "SP_ActualizarUsuario", cn))
+                    new SqlCommand("SP_ActualizarUsuario", cn))
                 {
-                    cmd.CommandType =
-                        CommandType.StoredProcedure;
+                    cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.AddWithValue(
                         "@Id_Usuario",
@@ -174,12 +171,12 @@ namespace CapaDatos
                         usuario.Nombre_Usuario);
 
                     cmd.Parameters.AddWithValue(
-                        "@Contraseña",
+                        "@Clave",
                         usuario.Clave);
 
                     cmd.Parameters.AddWithValue(
-                        "@NombreRol",
-                        usuario.NombreRol);
+                        "@Id_Rol",
+                        usuario.Id_Rol);
 
                     cmd.Parameters.AddWithValue(
                         "@Estado",
@@ -189,7 +186,6 @@ namespace CapaDatos
                 }
             }
         }
-
         public bool ActualizarClave(
     string usuario,
     string clave)
