@@ -49,5 +49,14 @@ namespace CapaNegocio
 
             datos.ActualizarUsuario(usuario);
         }
+
+        public bool ActualizarClave(
+     string usuario,
+     string clave)
+        {
+            return dal.ActualizarClave(
+                usuario,
+                clave);
+        }
     }
 }

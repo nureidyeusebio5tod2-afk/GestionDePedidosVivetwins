@@ -190,27 +190,32 @@ namespace CapaDatos
             }
         }
 
-        public bool ExisteUsuario(string usuario)
+        public bool ActualizarClave(
+    string usuario,
+    string clave)
         {
-            SqlConnection cn =
-            conexion.AbrirConexion();
+            using (SqlConnection cn =
+                conexion.AbrirConexion())
+            {
+                using (SqlCommand cmd =
+                    new SqlCommand(
+                    "SP_ActualizarClave", cn))
+                {
+                    cmd.CommandType =
+                    CommandType.StoredProcedure;
 
-            SqlCommand cmd =
-            new SqlCommand(
-            "SP_VerificarUsuario", cn);
+                    cmd.Parameters.AddWithValue(
+                    "@Usuario", usuario);
 
-            cmd.CommandType =
-            CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue(
+                    "@Clave", clave);
 
-            cmd.Parameters.AddWithValue(
-            "@Usuario", usuario);
+                    int filas =
+                    cmd.ExecuteNonQuery();
 
-            int cantidad =
-            Convert.ToInt32(cmd.ExecuteScalar());
-
-            cn.Close();
-
-            return cantidad > 0;
+                    return filas > 0;
+                }
+            }
         }
     }
 }
