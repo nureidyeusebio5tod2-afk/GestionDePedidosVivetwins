@@ -24,16 +24,34 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
         private void CargarInstalaciones()
         {
-            dataGridView1.DataSource =
-               instalacionBLL.MostrarInstalaciones();
+            dtInstalaciones = instalacionBLL.MostrarInstalaciones();
+
+            dataGridView1.DataSource = dtInstalaciones;
         }
+
         private void FrmInstalacionescs_Load(object sender, EventArgs e)
         {
+
             CargarInstalaciones();
+            CargarComboEstado();
             EstiloDataGrid();
         }
+
+        private void CargarComboEstado()
+        {
+            cmbEstado.Items.Clear();
+
+            cmbEstado.Items.Add("Todos");
+            cmbEstado.Items.Add("Pendiente");
+            cmbEstado.Items.Add("Completada");
+            cmbEstado.Items.Add("En Proceso");
+
+            cmbEstado.SelectedIndex = 0;
+        }
+        
 
         // =====================================
         // ESTILO DEL DATAGRIDVIEW
@@ -79,12 +97,58 @@ namespace CapaPresentacion
 
         private void Filtrar()
         {
-        
+            DataTable filtrado = dtInstalaciones.Clone();
+
+            string estado = cmbEstado.Text;
+
+            foreach (DataRow row in dtInstalaciones.Rows)
+            {
+                bool coincideEstado = false;
+
+                // ===== FILTRO ESTADO =====
+                if (estado == "Todos")
+                {
+                    coincideEstado = true;
+                }
+                else
+                {
+                    coincideEstado =
+                        row["Estado"].ToString() == estado;
+                }
+
+                // ===== SI COINCIDE =====
+                if (coincideEstado)
+                {
+                    filtrado.ImportRow(row);
+                }
+            }
+
+            dataGridView1.DataSource = filtrado;
+
+            EstiloDataGrid();
         }
-        
-        private void CargarComboEstado()
+
+
+        private void FiltrarPorFecha()
         {
-          
+            DataTable filtrado = dtInstalaciones.Clone();
+
+            DateTime fechaSeleccionada = dtpFecha.Value.Date;
+
+            foreach (DataRow row in dtInstalaciones.Rows)
+            {
+                DateTime fechaBD =
+                    Convert.ToDateTime(row["Fecha_Instalacion"]).Date;
+
+                if (fechaBD == fechaSeleccionada)
+                {
+                    filtrado.ImportRow(row);
+                }
+            }
+
+            dataGridView1.DataSource = filtrado;
+
+            EstiloDataGrid();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -99,9 +163,20 @@ namespace CapaPresentacion
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
+          
+            cmbEstado.SelectedIndex = 0;
 
-           
+            CargarInstalaciones();
+
+
+            dtpFecha.Value = DateTime.Today;
+
+            dataGridView1.DataSource = dtInstalaciones;
+
+            EstiloDataGrid();
         }
+           
+        
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -124,12 +199,7 @@ namespace CapaPresentacion
 
         }
 
-        private void FiltrarPorEstado()
-        {
-            
-        }
 
-       
     
         private void CargarCombos()
         {
@@ -150,6 +220,13 @@ namespace CapaPresentacion
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void dtpFecha_ValueChanged(object sender, EventArgs e)
+        {
+            FiltrarPorFecha();
+
 
         }
     }
