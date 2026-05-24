@@ -59,9 +59,9 @@
             this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Location = new System.Drawing.Point(2, 4);
+            this.panel2.Location = new System.Drawing.Point(-5, -4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(774, 766);
+            this.panel2.Size = new System.Drawing.Size(678, 774);
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -81,7 +81,7 @@
             this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(201, 397);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(565, 40);
+            this.label11.Size = new System.Drawing.Size(373, 25);
             this.label11.TabIndex = 1;
             this.label11.Text = "SISTEMA DE PEDIDOS E INSTALACIONES";
             // 
@@ -91,7 +91,7 @@
             this.label6.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(193, 326);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(433, 96);
+            this.label6.Size = new System.Drawing.Size(290, 65);
             this.label6.TabIndex = 0;
             this.label6.Text = "VIVETWINS";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -101,9 +101,9 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(23, 94);
+            this.label7.Location = new System.Drawing.Point(102, 93);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 32);
+            this.label7.Size = new System.Drawing.Size(65, 21);
             this.label7.TabIndex = 1;
             this.label7.Text = "Usuario";
             // 
@@ -112,9 +112,9 @@
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(136)))), ((int)(((byte)(167)))));
-            this.linkLabel2.Location = new System.Drawing.Point(87, 277);
+            this.linkLabel2.Location = new System.Drawing.Point(122, 316);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(287, 32);
+            this.linkLabel2.Size = new System.Drawing.Size(187, 21);
             this.linkLabel2.TabIndex = 3;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "¿Olvidaste tu contraseña?";
@@ -122,7 +122,7 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(52, 17);
+            this.txtUsuario.Location = new System.Drawing.Point(34, 14);
             this.txtUsuario.Multiline = true;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(216, 32);
@@ -147,7 +147,7 @@
             // 
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(136)))), ((int)(((byte)(167)))));
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(93, 373);
+            this.btnLogin.Location = new System.Drawing.Point(106, 352);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(231, 54);
             this.btnLogin.TabIndex = 8;
@@ -160,9 +160,9 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(868, 136);
+            this.label12.Location = new System.Drawing.Point(168, 21);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(296, 60);
+            this.label12.Size = new System.Drawing.Size(196, 40);
             this.label12.TabIndex = 9;
             this.label12.Text = "Iniciar sesión";
             // 
@@ -171,24 +171,26 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label13.Location = new System.Drawing.Point(23, 181);
+            this.label13.Location = new System.Drawing.Point(102, 200);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(138, 32);
+            this.label13.Size = new System.Drawing.Size(92, 21);
             this.label13.TabIndex = 12;
             this.label13.Text = "Contraseña";
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.panel3);
+            this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.panel4);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.linkLabel2);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.btnLogin);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(849, 226);
+            this.groupBox1.Location = new System.Drawing.Point(771, 121);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(398, 438);
+            this.groupBox1.Size = new System.Drawing.Size(519, 543);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
@@ -196,7 +198,7 @@
             // 
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.txtPassword);
-            this.panel3.Location = new System.Drawing.Point(69, 222);
+            this.panel3.Location = new System.Drawing.Point(103, 224);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(253, 39);
             this.panel3.TabIndex = 3;
@@ -215,9 +217,9 @@
             // 
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.txtUsuario);
-            this.panel4.Location = new System.Drawing.Point(69, 129);
+            this.panel4.Location = new System.Drawing.Point(103, 129);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(268, 49);
+            this.panel4.Size = new System.Drawing.Size(253, 49);
             this.panel4.TabIndex = 4;
             // 
             // pictureBox3
@@ -235,9 +237,8 @@
             // FrmLogin
             // 
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1345, 770);
+            this.ClientSize = new System.Drawing.Size(1345, 749);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -256,7 +257,6 @@
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

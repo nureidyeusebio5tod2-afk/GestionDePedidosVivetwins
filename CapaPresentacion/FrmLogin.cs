@@ -171,7 +171,8 @@ namespace CapaPresentacion
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            FrmRecuperar frm = new FrmRecuperar();
+            frm.ShowDialog();
         }
     }
 }

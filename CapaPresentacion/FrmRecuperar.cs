@@ -7,22 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Mail;
+using System.Data.SqlClient;
 
 namespace CapaPresentacion
 {
-    public partial class FrmCalendario : Form
+    public partial class FrmRecuperar : Form
     {
-        public FrmCalendario()
+        public FrmRecuperar()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void FrmCalendario_Load(object sender, EventArgs e)
+       
+
+        
+
+       
+        private void FrmRecuperar_Load(object sender, EventArgs e)
         {
 
         }

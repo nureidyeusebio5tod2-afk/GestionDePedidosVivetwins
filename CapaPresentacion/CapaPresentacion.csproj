@@ -100,11 +100,23 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmNuevaClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNuevaClave.Designer.cs">
+      <DependentUpon>FrmNuevaClave.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPedidos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmPedidos.Designer.cs">
       <DependentUpon>FrmPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRecuperar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRecuperar.Designer.cs">
+      <DependentUpon>FrmRecuperar.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmReportes.cs">
       <SubType>Form</SubType>
@@ -144,8 +156,14 @@
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmNuevaClave.resx">
+      <DependentUpon>FrmNuevaClave.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPedidos.resx">
       <DependentUpon>FrmPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRecuperar.resx">
+      <DependentUpon>FrmRecuperar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>

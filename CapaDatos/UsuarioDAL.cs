@@ -189,5 +189,28 @@ namespace CapaDatos
                 }
             }
         }
+
+        public bool ExisteUsuario(string usuario)
+        {
+            SqlConnection cn =
+            conexion.AbrirConexion();
+
+            SqlCommand cmd =
+            new SqlCommand(
+            "SP_VerificarUsuario", cn);
+
+            cmd.CommandType =
+            CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue(
+            "@Usuario", usuario);
+
+            int cantidad =
+            Convert.ToInt32(cmd.ExecuteScalar());
+
+            cn.Close();
+
+            return cantidad > 0;
+        }
     }
 }
