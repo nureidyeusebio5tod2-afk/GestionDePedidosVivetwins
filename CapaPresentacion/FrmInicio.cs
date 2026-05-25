@@ -70,7 +70,7 @@ namespace CapaPresentacion
             lblFecha.Text = DateTime.Now.ToLongDateString();
             
         }
-        private void AbrirFormulario(Form nuevoForm)
+        public void AbrirFormulario(Form nuevoForm)
         {
             try
             {

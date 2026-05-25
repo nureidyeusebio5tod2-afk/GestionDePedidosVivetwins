@@ -101,7 +101,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(102, 93);
+            this.label7.Location = new System.Drawing.Point(157, 104);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(65, 21);
             this.label7.TabIndex = 1;
@@ -112,7 +112,7 @@
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(136)))), ((int)(((byte)(167)))));
-            this.linkLabel2.Location = new System.Drawing.Point(122, 316);
+            this.linkLabel2.Location = new System.Drawing.Point(177, 327);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(187, 21);
             this.linkLabel2.TabIndex = 3;
@@ -147,7 +147,7 @@
             // 
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(136)))), ((int)(((byte)(167)))));
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(106, 352);
+            this.btnLogin.Location = new System.Drawing.Point(161, 363);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(231, 54);
             this.btnLogin.TabIndex = 8;
@@ -171,7 +171,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label13.Location = new System.Drawing.Point(102, 200);
+            this.label13.Location = new System.Drawing.Point(157, 211);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(92, 21);
             this.label13.TabIndex = 12;
@@ -198,7 +198,7 @@
             // 
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.txtPassword);
-            this.panel3.Location = new System.Drawing.Point(103, 224);
+            this.panel3.Location = new System.Drawing.Point(158, 235);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(253, 39);
             this.panel3.TabIndex = 3;
@@ -217,7 +217,7 @@
             // 
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.txtUsuario);
-            this.panel4.Location = new System.Drawing.Point(103, 129);
+            this.panel4.Location = new System.Drawing.Point(158, 140);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(253, 49);
             this.panel4.TabIndex = 4;
