@@ -264,8 +264,8 @@ namespace CapaPresentacion
                 // REPORTE
                 // =========================
 
-                FrmReportes frm =
-                    new FrmReportes();
+                FrmReportePedidos frm =
+                    new FrmReportePedidos();
 
                 frm.ShowDialog();
 
@@ -343,6 +343,16 @@ namespace CapaPresentacion
             {
                 e.Handled = true;
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }

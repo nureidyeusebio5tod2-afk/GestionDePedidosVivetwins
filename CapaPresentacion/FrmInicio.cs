@@ -201,12 +201,30 @@ namespace CapaPresentacion
 
         private void btnCerrarSeccion_Click(object sender, EventArgs e)
         {
-            FrmLogin login = new FrmLogin();
-            login.Show();
+            btnCerrarSeccion.FlatAppearance.MouseOverBackColor =
+             btnCerrarSeccion.BackColor;
 
-            this.Close();
+              btnCerrarSeccion.FlatAppearance.MouseDownBackColor =
+                btnCerrarSeccion.BackColor;
 
+
+            DialogResult resultado =
+                MessageBox.Show(
+                    "¿Seguro que deseas cerrar sesión?",
+                    "Cerrar sesión",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                this.Hide();
+
+                FrmLogin frm = new FrmLogin();
+
+                frm.Show();
+            }
         }
+
 
         private void PanelContenedor_Paint_1(object sender, PaintEventArgs e)
         {
